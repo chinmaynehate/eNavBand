@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText e1, e2;
     FirebaseAuth auth;
     GoogleSignInClient mGoogleSignInClient;
-    FirebaseUser user;
+
     SignInButton signInButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         e2 = (EditText) findViewById(R.id.editText4);
         auth = FirebaseAuth.getInstance();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken("598517087980-f0o18aalogoi1qv36664q369ipev9on0.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this,gso);
