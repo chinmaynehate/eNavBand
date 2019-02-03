@@ -1,8 +1,10 @@
 package com.example.firebase2019;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextPaint;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -43,7 +45,16 @@ public class RegisterActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful())
                             {
+
                                 Toast.makeText(getApplicationContext(),"User created Succesfully",Toast.LENGTH_SHORT).show();
+                               finish();
+                                Intent i =  new Intent(getApplicationContext(), ProfileActivity.class);
+                                startActivity(i);
+                            }
+                            else
+                            {
+
+                                Toast.makeText(getApplicationContext(),"User could not be created",Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
