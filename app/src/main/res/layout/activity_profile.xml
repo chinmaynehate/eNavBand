@@ -11,13 +11,50 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
+        android:layout_below="@id/button6"
         android:onClick="signOut"
-        android:layout_marginTop="97dp"
+
         android:textColor="#FFFFFF"
         android:background="@color/colorPrimary"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
 
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button7"
+
+        android:onClick="onClickL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:background="@color/colorPrimary"
+        android:text="Left Band"
+        android:textColor="#FFFFFF" />/>
+
+    <Button
+
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/button5"
+        android:layout_marginTop="250dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClickR"
+        android:text="Right BAnd"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 
 
 </RelativeLayout>
