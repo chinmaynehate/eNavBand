@@ -69,7 +69,9 @@ public class ProfileActivity extends AppCompatActivity {
         v.setEnabled(false);
 
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get("https://jsonplaceholder.typicode.com/users", new AsyncHttpResponseHandler() {
+        String url = "http://192.168.43.43/r";
+        Toast.makeText(getApplicationContext(),url,Toast.LENGTH_SHORT).show();
+        client.get(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if(responseBody != null){
@@ -78,10 +80,12 @@ public class ProfileActivity extends AppCompatActivity {
                     txtResponse.setText(new String(responseBody));
                 }
                 v.setEnabled(true);
+
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
                 v.setEnabled(true);
             }
         });
@@ -95,9 +99,10 @@ public class ProfileActivity extends AppCompatActivity {
 
     public void onClickL(final View v){
         v.setEnabled(false);
-
+        String url = "http://192.168.43.53/r";
+        Toast.makeText(getApplicationContext(),url,Toast.LENGTH_SHORT).show();
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get("http://free.currencyconverterapi.com/api/v5/convert?q=EUR_USD&compact=y", new AsyncHttpResponseHandler() {
+        client.get("https://192.168.43.53/r", new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if(responseBody != null){
