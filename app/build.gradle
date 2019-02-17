@@ -32,5 +32,24 @@ dependencies {
 
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
+    implementation 'com.applozic.communication.uiwidget:mobicomkitui:5.8.4'
+
+//
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+//
+//
+    implementation 'com.google.android.gms:play-services-places:15.0.1'
+//
+    implementation 'com.google.maps:google-maps-services:0.9.1'
+    implementation 'org.slf4j:slf4j-simple:1.7.25'
+
+
+
+
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+
 }
 apply plugin: 'com.google.gms.google-services'

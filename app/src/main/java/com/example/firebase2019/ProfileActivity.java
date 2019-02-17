@@ -123,4 +123,9 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     }
+    public  void openMaps(View v){
+        Intent j = new Intent(this, MapsActivity.class);
+        startActivity(j);
+
+    }
 }
